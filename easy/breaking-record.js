@@ -6,10 +6,15 @@ function breakingRecords(scores) {
 
     for (let i = 1; i < scores.length; i++){
         let score = scores[i];
-        console.log(score);
+        if(score > high){
+            breaking[0] += 1;
+            high = score;
+        }else if(score < low){
+            breaking[1] += 1;
+            low = score;
+        }
     }
-
-    console.log()
+    return breaking;
 }
 
 breakingRecords([3, 4, 21, 36, 10, 28, 35, 5, 24, 42]);
