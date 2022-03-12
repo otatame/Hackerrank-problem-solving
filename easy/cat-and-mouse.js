@@ -1,9 +1,10 @@
 function catAndMouse(x, y, z) {
 
-    let catA = (x - z) < 0 ? (x - z) * -1 : x - z;
-    console.log(catA);
-    let catB = (y - z) < 0 ? (y - z) * -1 : y - z;
-    console.log(catB);
+    let val1 = x - z;
+    let catA = val1 < 0 ? val1 * -1 : val1;
+
+    let val2 = y - z;
+    let catB = val2 < 0 ? val2 * - 1 : val2;
 
     if(catA === catB){
         return 'Mouse C';
@@ -15,4 +16,4 @@ function catAndMouse(x, y, z) {
 
 }
 
-console.log(catAndMouse(1, 3 ,2));
+console.log(catAndMouse(1, 5, 2));
